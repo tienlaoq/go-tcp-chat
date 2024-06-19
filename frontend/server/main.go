@@ -7,7 +7,7 @@ import (
 	"net/http"
 )
 
-// echo the dara recieved on websocket
+// echo the dara recieved on frontend
 func EchoServer(ws *websocket.Conn) {
 	io.Copy(ws, ws)
 }

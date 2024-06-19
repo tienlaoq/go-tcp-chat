@@ -7,7 +7,7 @@ import (
 	"log"
 	"net"
 	"os"
-	"tcp-chat/tcp/common"
+	"tcp-chat/backend/common"
 )
 
 const (
@@ -16,13 +16,13 @@ const (
 )
 
 func main() {
-	tcpAddr, err := net.ResolveTCPAddr("tcp", CONN_HOST+":"+CONN_PORT)
+	tcpAddr, err := net.ResolveTCPAddr("backend", CONN_HOST+":"+CONN_PORT)
 
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	conn, err := net.DialTCP("tcp", nil, tcpAddr)
+	conn, err := net.DialTCP("backend", nil, tcpAddr)
 	if err != nil {
 		log.Fatal(err)
 	}

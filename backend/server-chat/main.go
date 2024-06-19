@@ -6,13 +6,13 @@ import (
 	"log"
 	"net"
 	"os"
-	"tcp-chat/tcp/common"
+	"tcp-chat/backend/common"
 )
 
 const (
 	CONN_HOST = "0.0.0.0"
 	CONN_PORT = "3333"
-	CONN_TYPE = "tcp"
+	CONN_TYPE = "backend"
 )
 
 var (
